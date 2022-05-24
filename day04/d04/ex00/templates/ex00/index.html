@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown cheetsheet</title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'ex00/cheetsheet.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12 col-sm-12 col-md-9">
+                <h2 id="overview">Overview
+                    <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#overview" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+                </h2>
+
+                <p>This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for <a href="/basic-syntax">basic syntax</a>                    and <a href="/extended-syntax">extended syntax</a>.</p>
+
+                <h2 id="basic-syntax">Basic Syntax
+                    <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#basic-syntax" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+                </h2>
+
+                <p>These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.</p>
+
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Element</th>
+                            <th>Markdown Syntax</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="/basic-syntax/#headings">Heading</a></td>
+                            <td><code># H1<br>
+            ## H2<br>
+            ### H3</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/basic-syntax/#bold">Bold</a></td>
+                            <td><code>**bold text**</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/basic-syntax/#italic">Italic</a></td>
+                            <td><code>*italicized text*</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/basic-syntax/#blockquotes-1">Blockquote</a></td>
+                            <td><code>&gt; blockquote</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/basic-syntax/#ordered-lists">Ordered List</a></td>
+                            <td><code>
+          1. First item<br>
+          2. Second item<br>
+          3. Third item<br>
+        </code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/basic-syntax/#unordered-lists">Unordered List</a></td>
+                            <td>
+                                <code>
+            - First item<br>
+            - Second item<br>
+            - Third item<br>
+          </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="/basic-syntax/#code">Code</a></td>
+                            <td><code>`code`</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/basic-syntax/#horizontal-rules">Horizontal Rule</a></td>
+                            <td><code>---</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/basic-syntax/#links">Link</a></td>
+                            <td><code>[title](https://www.example.com)</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/basic-syntax/#images-1">Image</a></td>
+                            <td><code>![alt text](image.jpg)</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 id="extended-syntax">Extended Syntax
+                    <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#extended-syntax" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+                </h2>
+
+                <p>These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.</p>
+
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Element</th>
+                            <th>Markdown Syntax</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="/extended-syntax/#tables">Table</a></td>
+                            <td><code>
+            | Syntax      | Description |<br>
+            | ----------- | ----------- |<br>
+            | Header      | Title       |<br>
+            | Paragraph   | Text        |
+        </code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/extended-syntax/#fenced-code-blocks">Fenced Code Block</a></td>
+                            <td><code>```<br>
+        {<br>
+        &nbsp;&nbsp;"firstName": "John",<br>
+        &nbsp;&nbsp;"lastName": "Smith",<br>
+        &nbsp;&nbsp;"age": 25<br>
+        }<br>
+        ```
+        </code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/extended-syntax/#footnotes">Footnote</a></td>
+                            <td><code>
+          Here's a sentence with a footnote. [^1]<br><br>
+          [^1]: This is the footnote.
+        </code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/extended-syntax/#heading-ids">Heading ID</a></td>
+                            <td><code>### My Great Heading {#custom-id}</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/extended-syntax/#definition-lists">Definition List</a></td>
+                            <td><code>
+          term<br>
+          : definition
+        </code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/extended-syntax/#strikethrough">Strikethrough</a></td>
+                            <td><code>~~The world is flat.~~</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/extended-syntax/#task-lists">Task List</a></td>
+                            <td><code>
+          - [x] Write the press release<br>
+          - [ ] Update the website<br>
+          - [ ] Contact the media
+        </code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/extended-syntax/#emoji">Emoji</a><br>(see also <a href="/extended-syntax/#copying-and-pasting-emoji">Copying and Pasting Emoji</a>)</td>
+                            <td><code>
+          That is so funny! :joy:
+        </code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/extended-syntax/#highlight">Highlight</a></td>
+                            <td><code>
+          I need to highlight these ==very important words==.
+        </code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/extended-syntax/#subscript">Subscript</a></td>
+                            <td><code>
+          H~2~O
+        </code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/extended-syntax/#superscript">Superscript</a></td>
+                            <td><code>
+          X^2^
+        </code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 id="downloads">Downloads
+                    <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="#downloads" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+                </h2>
+
+                <p>You can <a href="/assets/markdown-cheat-sheet.md" download="markdown-cheat-sheet.md">download this cheat sheet as a Markdown file</a> for use in your Markdown application.</p>
+
+                <div class="card bg-light mb-3" style="max-width: 100%; margin-top: 50px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-3">
+                            <a href="/book/">
+
+                                <img srcset="https://mdg.imgix.net/assets/images/book-cover.jpg?auto=format&amp;fit=clip&amp;w=480 480w,
+               https://mdg.imgix.net/assets/images/book-cover.jpg?auto=format&amp;fit=clip&amp;q=40&amp;w=1080 1080w" src="https://mdg.imgix.net/assets/images/book-cover.jpg" class="img-fluid" alt="Markdown Guide book cover" loading="lazy" sizes="100vw">
+
+                            </a>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body" style="padding-left: 6%;">
+                                <h5 class="card-title no-anchor" data-toc-skip="" id="take-your-markdown-skills-to-the-next-level">Take your Markdown skills to the next level.</h5>
+                                <p class="card-text">Learn Markdown in 60 pages. Designed for both novices and experts, <em>The Markdown Guide</em> book is a comprehensive reference that has everything you need to get started and master Markdown syntax.</p>
+                                <a class="btn btn-success" style="margin-top: 5px; margin-right: 15px" href="/book/">Get the Book</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-info" style="margin-top: 50px">
+                    <h6 class="card-header no-anchor bg-info text-white" data-toc-skip="">Want to learn more Markdown?</h6>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Don't stop now! 🚀 Star the <a href="https://github.com/mattcone/markdown-guide">GitHub repository</a> and then enter your email address below to receive new Markdown tutorials via email. No spam!</p>
+
+                        <form action="https://markdownguide.us13.list-manage.com/subscribe/post?u=844e74c82a5a1db84f93aef40&amp;id=9fa3356008" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+                            <div class="form-group" style="margin-top: 20px">
+                                <input type="email" class="form-control form-control-lg" name="EMAIL" id="mce-EMAIL" placeholder="Your email address"><input type="hidden" value="1" name="embed">
+                            </div>
+                            <button type="submit" class="btn btn-success">Stay updated</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-none d-md-block" id="sidebar">
+                <nav id="toc" data-toggle="toc" class="sticky-top" style="z-index:1">
+                    <ul class="nav navbar-nav">
+                        <li><a class="nav-link" href="#overview">Overview</a></li>
+                        <li><a class="nav-link" href="#basic-syntax">Basic Syntax</a></li>
+                        <li><a class="nav-link" href="#extended-syntax">Extended Syntax</a></li>
+                        <li><a class="nav-link" href="#downloads">Downloads</a></li>
+                    </ul>
+                </nav>
+
+                <div style="position: fixed; bottom: 0px; right: 0px;">
+                    <div data-ea-publisher="markdownguide" data-ea-type="image"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+django
+django-admin startproject d04
+python manage.py startapp ex00
+python manage.py runserver
